@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康経営アプリ</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.jsのCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>健康経営アプリ</h1>
+
+    <div class="input-container">
+        <label for="weight">体重 (kg):</label>
+        <input type="number" id="weight" placeholder="体重を入力">
+    </div>
+    
+    <div class="input-container">
+        <label for="exercise">運動時間 (分):</label>
+        <input type="number" id="exercise" placeholder="運動時間を入力">
+    </div>
+
+    <button onclick="trackProgress()">進捗を記録</button>
+
+    <div class="progress">
+        <h2>進捗状況</h2>
+        <p id="progressText">データがありません。</p>
+    </div>
+
+    <!-- グラフを表示するキャンバス -->
+    <div>
+        <canvas id="progressChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
